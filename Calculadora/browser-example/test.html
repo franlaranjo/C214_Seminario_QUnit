@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Test Suite</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.17.2.css">
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.17.2.js"></script>
+</body>
+
+<script>
+    //início dos métodos da calculadora
+    function subtrair(a, b) {
+        return a - b;
+    };
+
+    function somar(a, b) {
+        return a + b;
+    };
+
+    function multiplicar(a, b) {
+        return a * b;
+    };
+
+    function dividir(a, b) {
+        return a / b;
+    };
+
+    //início dos testes dos métodos
+    QUnit.module('calculadora', function () {
+
+        QUnit.test('soma dois numeros', function (assert) {
+            assert.equal(somar(1, 2), 4);
+        });
+
+        QUnit.test('subtrai dois numeros', function (assert) {
+            assert.equal(subtrair(1, 2), -1);
+        });
+
+        QUnit.test('divide dois numeros', function (assert) {
+            assert.equal(dividir(4, 2), 2);
+        });
+
+        QUnit.test('multiplica dois numeros', function (assert) {
+            assert.equal(multiplicar(3, 2), 6);
+        });
+    });
+</script>
